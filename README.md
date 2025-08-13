@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# F1 Live Race Telemetry & Strategy Simulator - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, real-time dashboard for Formula 1 race telemetry and strategy simulation.  
+This React application provides live telemetry visualization, pit stop strategy insights, and historical race replay capabilities, offering users an immersive racing data experience.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+As a **Computer Science student** with a deep passion for Formula 1, I wanted to combine my technical skills with my love for racing by building the **F1 Live Race Telemetry & Strategy Simulator**. The idea came from my fascination with how teams analyze telemetry in real time to make split-second decisions — I wanted to recreate that experience in a web application.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project is built with **React and TypeScript** and demonstrates my ability to develop a **full-stack, real-time application**. I use WebSockets to stream live telemetry data, REST APIs for race and strategy information, and a component-driven UI to display complex data clearly.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Through this project, I aimed to **learn and showcase**:  
+- Real-time data handling and visualization  
+- Integration of predictive algorithms for strategy insights  
+- Building maintainable, scalable React applications  
+- Combining domain knowledge (F1 racing) with practical software engineering
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+It’s a portfolio project that reflects both my **technical capabilities** and my **passion for motorsport**, creating an immersive and educational experience for users.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Real-Time Telemetry:** Speed, tyre temperature, brake temperature, gear, and lap data updated via WebSockets.  
+- **Interactive Track Map:** Visualize car positions on a 2D track using Leaflet.  
+- **Pit Strategy Engine:** Display predicted pit stops and estimated race outcomes.  
+- **Historical Replay:** Replay races with full telemetry data, including play/pause controls and timeline navigation.  
+- **User Authentication:** JWT-based login to protect dashboard and replay routes.  
+- **Responsive UI:** Modular, component-driven React architecture for scalability and maintainability.
+
+
+
+## Technical Stack
+
+- **Frontend:** React, TypeScript, Tailwind (V.3), Chart.js, Leaflet  
+- **State Management:** React hooks, Context API  
+- **Backend Integration:** REST API + WebSocket (Spring Boot backend)  
+- **Authentication:** JWT stored in `localStorage`  
+- **DevOps Ready:** Docker-ready for containerized deployments, CI/CD compatible
+
+# Getting Started
+
+### Prerequisites
+
+- Node.js >= 16  
+- npm >= 8  
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/AyandaGumede/F1_LiveRace_Telemetry_and_Strategy_Simulator_Frontend.git
+cd F1_LiveRace_Telemetry_and_Strategy_Simulator_Frontend
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
